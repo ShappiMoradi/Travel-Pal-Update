@@ -1,0 +1,138 @@
+﻿<Window x:Class="Travel_Pal.TravelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Travel_Pal"
+        mc:Ignorable="d"
+        Title="TravelWindow" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Background="Transparent" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Layout-->
+
+            <Border CornerRadius="10"
+            Grid.RowSpan="6"
+            Grid.ColumnSpan="4" Margin="0,0,0,38">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="MediumSlateBlue" Offset="0.3"/>
+                        <GradientStop Color ="MintCream" Offset="1"/>
+                    </LinearGradientBrush>
+
+                </Border.Background>
+            </Border>
+
+            <StackPanel Orientation="Horizontal"
+                    Grid.ColumnSpan="2"
+                    Grid.Column="0"
+                    Height="40" 
+                    Margin="0,0,0,45"/>
+
+            <Label
+             x:Name="lblShowusername" 
+             Content="User :"
+             FontSize="22"
+             FontFamily="Arial"/>
+
+
+
+
+            <StackPanel 
+            Orientation="Vertical" 
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="4"/>
+
+
+            <!--Letting the user se their personal info.-->
+
+            <Button
+             x:Name="btnUser"
+             Content="User Details"
+             Margin="84,8,10,43" 
+             Grid.Column="3" 
+             Click="btnUser_Click"/>
+
+            <Button
+             x:Name="btnDetails"
+             Content="Travel Details"
+             Margin="84,41,10,10" 
+             Grid.Column="3" 
+             Click="btnDetails_Click"/>
+
+            <Button
+             x:Name="btnAddTravel"
+             Content="Add Travel"
+             Margin="84,0,10,51" 
+             Grid.Column="3" 
+             Grid.Row="1" 
+            Click="btnAddTravel_Click"/>
+
+
+            <!-- Shows the users added travels-->
+            <Label
+             Content="Your added travels"
+             FontSize="20"
+             Grid.Column="1"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Bottom" 
+             Grid.ColumnSpan="2"
+             Margin="72,0,0,37"/>
+
+
+            <!-- Button for signing out-->
+
+            <Button
+             x:Name="btnSignOut"
+             Content="Sign Out"
+             Margin="81,41,13,10" 
+             Grid.Column="3" 
+             Grid.Row="4" 
+            Click="btnSignOut_Click"
+            RenderTransformOrigin="0.591,4.02" />
+
+            <ListView
+            x:Name="lvListview"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="4" 
+            Margin="72,43,184,10"/>
+
+
+            <Button
+              x:Name="btnRemove"
+              Content="Remove Travel"
+              Grid.Row="1"
+              Grid.Column="3" 
+              Margin="78,36,10,10"
+              Click="btnRemove_Click"/>
+
+            <Button
+              x:Name="btnInfo"
+              Content="Info"
+              Grid.Row="5" 
+              Margin="10,0,78,46" Click="btnInfo_Click"
+              />
+
+        </Grid>
+
+    </Grid>
+</Window>
